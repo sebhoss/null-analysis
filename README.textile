@@ -1,0 +1,30 @@
+h1. Null-Analysis "!https://secure.travis-ci.org/sebhoss/null-analysis.png!":http://travis-ci.org/sebhoss/null-analysis "!https://www.ohloh.net/p/null-analysis/widgets/project_thin_badge.gif!":https://www.ohloh.net/p/null-analysis/
+
+p. Helpers for null analysis in Java projects.
+
+
+h2. Usage
+
+p. Simply reference this module as a dependency to your POM:
+
+bc. 
+<dependency>
+  <groupId>com.github.sebhoss</groupId>
+  <artifactId>null-analysis</artifactId>
+  <version>[1.0.0,2.0.0)</version>
+</dependency>
+
+
+h2. Development
+
+h3. License
+
+p. This program is free software. It comes without any warranty, to the extent permitted by applicable law. You can redistribute it and/or modify it under the terms of the Do What The Fuck You Want To Public License, Version 2, as published by Sam Hocevar. See LICENSE or "http://www.wtfpl.net/":http://www.wtfpl.net/ for more details.
+
+h3. Setup
+
+p. This projects uses "Java":http://www.java.com/, "Maven":http://maven.apache.org/ and "Git":http://git-scm.com/ as the main development tools. To build the project yourself just download & install at least Maven 3.0 and call *mvn install* inside the project folder. Maven should then proceed to clean, build, package and install this project.
+
+h3. Versioning
+
+p. This project follows the "semantic versioning":http://semver.org/ guidelines.
