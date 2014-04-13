@@ -11,8 +11,7 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-
-import javax.annotation.meta.TypeQualifierDefault;
+import java.lang.annotation.Target;
 
 /**
  * This annotation can be applied to a package, class or method to indicate that the class fields, method return types
@@ -26,8 +25,8 @@ import javax.annotation.meta.TypeQualifierDefault;
  */
 @Documented
 @Inherited
-@TypeQualifierDefault({ ElementType.ANNOTATION_TYPE, ElementType.CONSTRUCTOR, ElementType.FIELD,
-        ElementType.LOCAL_VARIABLE, ElementType.METHOD, ElementType.PACKAGE, ElementType.PARAMETER, ElementType.TYPE })
+@Target({ ElementType.ANNOTATION_TYPE, ElementType.CONSTRUCTOR, ElementType.FIELD,
+    ElementType.LOCAL_VARIABLE, ElementType.METHOD, ElementType.PACKAGE, ElementType.PARAMETER, ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
 public @interface NotNullByDefault {
 
