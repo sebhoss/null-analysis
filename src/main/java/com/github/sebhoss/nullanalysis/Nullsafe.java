@@ -6,8 +6,6 @@
  */
 package com.github.sebhoss.nullanalysis;
 
-import javax.annotation.Nullable;
-
 /**
  * Utility classes which helps working with legacy (nullable) APIs.
  */

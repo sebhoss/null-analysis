@@ -23,12 +23,11 @@ import javax.annotation.meta.TypeQualifierDefault;
  * superclass applies)
  * <li>there is a default parameter annotation applied to a more tightly nested element.
  * </ul>
- * <p/>
  */
 @Documented
 @Inherited
 @TypeQualifierDefault({ ElementType.ANNOTATION_TYPE, ElementType.CONSTRUCTOR, ElementType.FIELD,
-    ElementType.LOCAL_VARIABLE, ElementType.METHOD, ElementType.PACKAGE, ElementType.PARAMETER, ElementType.TYPE })
+        ElementType.LOCAL_VARIABLE, ElementType.METHOD, ElementType.PACKAGE, ElementType.PARAMETER, ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
 public @interface NotNullByDefault {
 
