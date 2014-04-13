@@ -13,13 +13,17 @@ import javax.annotation.Nullable;
  */
 public final class Nullsafe {
 
+    private Nullsafe() {
+        // utility class
+    }
+
     /**
      * @param reference
      *            A possible <code>null</code> reference.
      * @return Either the reference itself, or an {@link NullPointerException}, in case the reference was
      *         <code>null</code>.
      */
-    public static <T> T nullsafe(@Nullable final T reference) {
+    public static <T> T nullsafe(final @Nullable T reference) {
         if (reference != null) {
             return reference;
         }
@@ -35,16 +39,12 @@ public final class Nullsafe {
      * @return Either the reference itself, or an {@link NullPointerException}, in case the reference was
      *         <code>null</code>.
      */
-    public static <T> T nullsafe(@Nullable final T reference, final String message) {
+    public static <T> T nullsafe(final @Nullable T reference, final String message) {
         if (reference != null) {
             return reference;
         }
 
         throw new NullPointerException(message); // NOPMD - we want to throw NPE here
-    }
-
-    private Nullsafe() {
-        // utility class
     }
 
 }
