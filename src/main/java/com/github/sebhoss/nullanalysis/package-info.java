@@ -7,5 +7,8 @@
 /**
  * Code related to <code>null</code> analysis.
  */
-@NotNullByDefault
+@NonNullByDefault
 package com.github.sebhoss.nullanalysis;
+
+import org.eclipse.jdt.annotation.NonNullByDefault;
+

@@ -6,6 +6,8 @@
  */
 package com.github.sebhoss.nullanalysis;
 
+import org.eclipse.jdt.annotation.Nullable;
+
 /**
  * Utility classes which helps working with legacy (nullable) APIs.
  */
