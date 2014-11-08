@@ -19,6 +19,8 @@ public final class Nullsafe {
     }
 
     /**
+     * @param <T>
+     *            The type of the reference
      * @param reference
      *            A possible <code>null</code> reference.
      * @return Either the reference itself, or an {@link NullPointerException}, in case the reference was
@@ -33,6 +35,8 @@ public final class Nullsafe {
     }
 
     /**
+     * @param <T>
+     *            The type of the reference
      * @param reference
      *            A possible <code>null</code> reference.
      * @param message
