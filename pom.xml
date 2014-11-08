@@ -61,4 +61,24 @@
     </dependency>
   </dependencies>
 
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!--                                   BUILD                                 -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <configuration>
+          <!--
+            Ignore Eclipse JDT annotations because @NonNull, etc are not retained
+            in byte code. Therefore the plugin detects a false positive.
+           -->
+          <usedDependencies>
+            <usedDependency>org.eclipse.jdt:org.eclipse.jdt.annotation</usedDependency>
+          </usedDependencies>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
