@@ -26,7 +26,7 @@ public final class Nullsafe {
      * @return Either the reference itself, or an {@link NullPointerException}, in case the reference was
      *         <code>null</code>.
      */
-    public static <T> @NonNull T nullsafe(final @Nullable T reference) {
+    public static <T> @NonNull T nullsafe(@Nullable final T reference) {
         if (reference != null) {
             return reference;
         }
@@ -44,7 +44,7 @@ public final class Nullsafe {
      * @return Either the reference itself, or an {@link NullPointerException}, in case the reference was
      *         <code>null</code>.
      */
-    public static <T> @NonNull T nullsafe(final @Nullable T reference, final String message) {
+    public static <T> @NonNull T nullsafe(@Nullable final T reference, final String message) {
         if (reference != null) {
             return reference;
         }
