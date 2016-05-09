@@ -7,5 +7,5 @@
 /**
  * Code related to <code>null</code> analysis.
  */
-package com.github.sebhoss.nullanalysis;
+package de.xn__ho_hia.null_analysis;
 
