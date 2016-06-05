@@ -23,7 +23,7 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <groupId>de.xn--ho-hia.null_analysis</groupId>
+  <groupId>de.xn--ho-hia.quality</groupId>
   <artifactId>null-analysis</artifactId>
   <version>3.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
@@ -81,34 +81,4 @@
     <pit.skip>true</pit.skip>
   </properties>
 
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <!--                               DEPENDENCIES                              -->
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <dependencies>
-    <dependency>
-      <groupId>org.eclipse.jdt</groupId>
-      <artifactId>org.eclipse.jdt.annotation</artifactId>
-    </dependency>
-  </dependencies>
-
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <!--                                   BUILD                                 -->
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <configuration>
-          <!--
-            Ignore Eclipse JDT annotations because @NonNull, etc are not retained
-            in byte code. Therefore the plugin detects a false positive.
-           -->
-          <usedDependencies>
-            <usedDependency>org.eclipse.jdt:org.eclipse.jdt.annotation</usedDependency>
-          </usedDependencies>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 </project>
