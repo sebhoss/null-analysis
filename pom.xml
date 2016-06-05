@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright © 2013 Sebastian Hoß <mail@shoss.de>
-    This work is free. You can redistribute it and/or modify it under the
-    terms of the Do What The Fuck You Want To Public License, Version 2,
-    as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
+    This file is part of null-anaysis. It is subject to the license terms in the LICENSE file found in the top-level
+    directory of this distribution and at http://creativecommons.org/publicdomain/zero/1.0/. No part of null-anaysis,
+    including this file, may be copied, modified, propagated, or distributed except according to the terms contained
+    in the LICENSE file.
 
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
@@ -15,7 +15,7 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!-- https://maven.apache.org/pom.html#Inheritance -->
   <parent>
-    <groupId>de.xn__ho_hia.maven.parents</groupId>
+    <groupId>de.xn--ho-hia.maven.parents</groupId>
     <artifactId>maven-parents-java-stable</artifactId>
     <version>0.0.0-SNAPSHOT</version>
   </parent>
@@ -23,11 +23,11 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <groupId>de.xn__ho_hia.null_analysis</groupId>
+  <groupId>de.xn--ho-hia.null_analysis</groupId>
   <artifactId>null-analysis</artifactId>
   <version>3.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
-  <url>http://seb.hoß.de/null-analysis</url>
+  <url>http://seb.xn--ho-hia.de/null-analysis</url>
   <inceptionYear>2013</inceptionYear>
   <name>Null Analysis</name>
   <description>Code related to NULL analysis</description>
@@ -39,8 +39,38 @@
     <connection>scm:git:git://github.com/sebhoss/null-analysis.git</connection>
     <developerConnection>scm:git:git@github.com:sebhoss/null-analysis.git</developerConnection>
     <tag>master</tag>
-    <url>${project.url}</url>
+    <url>https://github.com/sebhoss/null-analysis</url>
   </scm>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!--                             ISSUE MANAGEMENT                            -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!-- https://maven.apache.org/pom.html#Issue_Management -->
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/sebhoss/null-analysis/issues</url>
+  </issueManagement>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!--                               CI MANAGEMENT                             -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!-- https://maven.apache.org/pom.html#Continuous_Integration_Management -->
+  <ciManagement>
+    <system>Travis</system>
+    <url>https://travis-ci.org/sebhoss/null-analysis</url>
+  </ciManagement>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!--                          DISTRIBUTION MANAGEMENT                        -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!-- https://maven.apache.org/pom.html#Distribution_Management -->
+  <distributionManagement>
+    <site>
+      <id>github</id>
+      <name>GitHub Pages</name>
+      <url>http://seb.xn--ho-hia.de/null-analysis/</url>
+    </site>
+  </distributionManagement>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!--                                PROPERTIES                               -->

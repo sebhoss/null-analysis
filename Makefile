@@ -6,6 +6,8 @@ help:
 	@echo ""
 	@echo "   1. make sonar-analysis        - perform sonar analysis"
 
+.PHONY: sonar-analysis
 sonar-analysis:
-	@mvn sonar:sonar -Dsonar.host.url=http://localhost:58200 -Dsonar.jdbc.url=jdbc:postgresql://localhost:58300/sonar
-
+	# http://docs.sonarqube.org/display/SONAR/Analyzing+with+Maven
+	@mvn clean install
+	@mvn sonar:sonar -Dsonar.host.url=http://localhost:59000
