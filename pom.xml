@@ -78,6 +78,7 @@
   <!-- https://maven.apache.org/pom.html#Properties -->
   <properties>
     <skipTests>true</skipTests>
+    <pit.skip>true</pit.skip>
   </properties>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
