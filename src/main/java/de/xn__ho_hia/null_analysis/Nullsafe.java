@@ -44,7 +44,7 @@ public final class Nullsafe {
      * Converts a {@link Nullable} reference into a {@link NonNull} reference. Performs a strict <code>null</code> check
      * that fails in case a <code>null</code> reference is given.
      *
-     * @param <T>
+     * @param <TYPE>
      *            The type of the reference
      * @param reference
      *            A possible <code>null</code> reference.
@@ -53,7 +53,7 @@ public final class Nullsafe {
      * @return Either the reference itself, or an {@link NullPointerException}, in case the reference was
      *         <code>null</code>.
      */
-    public static <T> @NonNull T nonNull(@Nullable final T reference, final String message) {
+    public static <TYPE> @NonNull TYPE nonNull(@Nullable final TYPE reference, final String message) {
         if (reference != null) {
             return reference;
         }
