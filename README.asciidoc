@@ -8,7 +8,7 @@ image:https://img.shields.io/badge/license-cc%20zero-000000.svg["CC Zero", link=
 image:https://img.shields.io/maven-central/v/{project-group}/{project-name}.svg?style=flat-square["Maven Central", link="https://maven-badges.herokuapp.com/maven-central/{project-group}/{project-name}"]
 image:https://www.openhub.net/p/{project-name}/widgets/project_thin_badge.gif["Open Hub statistics", link="https://www.openhub.net/p/{project-name}"]
 image:https://img.shields.io/travis/{github-org}/{project-name}/master.svg?style=flat-square["Build Status", link="https://travis-ci.org/{github-org}/{project-name}"]
-image:https://img.shields.io/gitter/room/{github-org}/{project-name}.svg?maxAge=2592000["Gitter", link="https://gitter.im/{github-org}/{project-name}"]
+image:https://img.shields.io/badge/irc-%23metio.wtf-green.svg?style=flat-square["Chat on IRC", link="http://webchat.freenode.net/?channels=metio.wtf"]
 
 Utility library for null analysis in Java projects.
 
