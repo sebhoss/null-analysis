@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    This file is part of null-anaysis. It is subject to the license terms in the LICENSE file found in the top-level
-    directory of this distribution and at http://creativecommons.org/publicdomain/zero/1.0/. No part of null-anaysis,
+    This file is part of null-analysis. It is subject to the license terms in the LICENSE file found in the top-level
+    directory of this distribution and at http://creativecommons.org/publicdomain/zero/1.0/. No part of null-analysis,
     including this file, may be copied, modified, propagated, or distributed except according to the terms contained
     in the LICENSE file.
 
@@ -21,20 +21,27 @@
   </parent>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <!--                               INFORMATIONS                              -->
+  <!--                               COORDINATES                               -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!-- https://maven.apache.org/pom.html#Maven_Coordinates -->
   <groupId>de.xn--ho-hia.quality</groupId>
   <artifactId>null-analysis</artifactId>
   <version>3.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
-  <url>http://seb.xn--ho-hia.de/null-analysis</url>
-  <inceptionYear>2013</inceptionYear>
-  <name>Null Analysis</name>
-  <description>Code related to NULL analysis</description>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <!--                                  SOURCE                                 -->
+  <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!-- https://maven.apache.org/pom.html#More_Project_Information -->
+  <name>Null Analysis</name>
+  <description>Code related to NULL analysis</description>
+  <url>http://seb.xn--ho-hia.de/null-analysis</url>
+  <inceptionYear>2013</inceptionYear>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!--                                    SCM                                  -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!-- https://maven.apache.org/pom.html#SCM -->
   <scm>
     <connection>scm:git:git://github.com/sebhoss/null-analysis.git</connection>
     <developerConnection>scm:git:git@github.com:sebhoss/null-analysis.git</developerConnection>
