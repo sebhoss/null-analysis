@@ -58,7 +58,7 @@ public final class Nullsafe {
             return reference;
         }
 
-        throw new NullPointerException(message); // NOPMD - we want to throw NPE here
+        throw new IllegalArgumentException(message);
     }
 
     /**
