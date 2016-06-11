@@ -7,4 +7,4 @@
 /**
  * Code related to <code>null</code> analysis.
  */
-package de.xn__ho_hia.null_analysis;
+package de.xn__ho_hia.quality.null_analysis;

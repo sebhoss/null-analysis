@@ -4,7 +4,7 @@
  * including this file, may be copied, modified, propagated, or distributed except according to the terms contained
  * in the LICENSE file.
  */
-package de.xn__ho_hia.null_analysis;
+package de.xn__ho_hia.quality.null_analysis;
 
 import java.util.Collection;
 import java.util.Collections;
