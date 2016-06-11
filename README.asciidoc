@@ -1,0 +1,62 @@
+= Null-Analysis
+Sebastian Hoß <http://seb.xn--ho-hia.de/[@sebhoss]>
+:github-org: sebhoss
+:project-name: null-analysis
+:project-group: de.xn--ho-hia.quality
+
+image:https://img.shields.io/badge/license-cc%20zero-000000.svg["CC Zero", link="http://creativecommons.org/publicdomain/zero/1.0/"]
+image:https://img.shields.io/maven-central/v/{project-group}/{project-name}.svg?style=flat-square["Maven Central", link="https://maven-badges.herokuapp.com/maven-central/{project-group}/{project-name}"]
+image:https://www.openhub.net/p/{project-name}/widgets/project_thin_badge.gif["Open Hub statistics", link="https://www.openhub.net/p/{project-name}"]
+image:https://img.shields.io/travis/{github-org}/{project-name}/master.svg?style=flat-square["Build Status", link="https://travis-ci.org/{github-org}/{project-name}"]
+image:https://img.shields.io/gitter/room/{github-org}/{project-name}.svg?maxAge=2592000["Gitter", link="https://gitter.im/{github-org}/{project-name}"]
+
+Utility library for null analysis in Java projects.
+
+== Usage
+
+Convert any `@Nullable` reference from legacy code to a `@NonNull` reference by using the `Nullsafe` utility class:
+
+[source, java]
+----
+@Nullable Object myObject = ...
+@NonNull Object nonNullObject = Nullsafe.nonNull(myObject);
+----
+
+An `IllegalArgumentException` is thrown in case `myObject` is `null`.
+
+=== Integration
+
+To use this project just declare the following dependency inside your POM:
+
+[source, xml]
+----
+<dependency>
+  <groupId>de.xn--ho-hia.quality</groupId>
+  <artifactId>null-analysis</artifactId>
+  <version>${version.null-analysis}</version>
+</dependency
+----
+
+Replace `${version.null-analysis}` with the http://search.maven.org/#search%7Cga%7C1%7Cg%3Ade.xn--ho-hia.quality%20a%3Anull-analysis[latest release]. This project follows the link:http://semver.org/[semantic versioning guidelines].
+
+=== Compatibility
+
+This project is compatible with the following Java versions:
+
+.Java compatibility
+|===
+| | 3.X.Y
+
+| Java 8
+| ✓
+|===
+
+
+== License
+
+To the extent possible under law, the author(s) have dedicated all copyright
+and related and neighboring rights to this software to the public domain
+worldwide. This software is distributed without any warranty.
+
+You should have received a copy of the CC0 Public Domain Dedication along
+with this software. If not, see http://creativecommons.org/publicdomain/zero/1.0/.
