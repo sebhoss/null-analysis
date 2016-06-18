@@ -26,7 +26,7 @@
   <!-- https://maven.apache.org/pom.html#Maven_Coordinates -->
   <groupId>de.xn--ho-hia.quality</groupId>
   <artifactId>null-analysis</artifactId>
-  <version>3.0.0.${revision}</version>
+  <version>${revision}</version>
   <packaging>jar</packaging>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -84,7 +84,7 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!-- https://maven.apache.org/pom.html#Properties -->
   <properties>
-    <revision>0-SNAPSHOT</revision>
+    <revision>3.0.0-SNAPSHOT</revision>
     <skipTests>true</skipTests>
     <pit.skip>true</pit.skip>
   </properties>
