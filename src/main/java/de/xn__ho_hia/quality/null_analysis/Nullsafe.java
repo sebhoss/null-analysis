@@ -6,6 +6,7 @@
  */
 package de.xn__ho_hia.quality.null_analysis;
 
+import java.math.BigInteger;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -150,6 +151,74 @@ public final class Nullsafe {
      */
     public static boolean isNullOrEmpty(@Nullable final String string) {
         return string == null || string.isEmpty();
+    }
+
+    /**
+     * @param value
+     *            The value to wrap
+     * @return A @NonNull {@link BigInteger}
+     */
+    @NonNull
+    public static BigInteger asBigInteger(final long value) {
+        return Nullsafe.nonNull(BigInteger.valueOf(value));
+    }
+
+    /**
+     * @param value
+     *            The value to wrap
+     * @return A @NonNull {@link Long}
+     */
+    @NonNull
+    public static Long asLong(final long value) {
+        return Nullsafe.nonNull(Long.valueOf(value));
+    }
+
+    /**
+     * @param first
+     *            The first value to add
+     * @param second
+     *            The second value to add
+     * @return The sum of both values as a @NonNull {@link BigInteger}
+     */
+    @NonNull
+    public static BigInteger addNullsafe(@Nullable final BigInteger first, @Nullable final BigInteger second) {
+        return Nullsafe.nonNull(Nullsafe.nonNull(first).add(second));
+    }
+
+    /**
+     * @param first
+     *            The first value to subtract
+     * @param second
+     *            The second value to subtract
+     * @return The difference of both values as a @NonNull {@link BigInteger}
+     */
+    @NonNull
+    public static BigInteger subtractNullsafe(@Nullable final BigInteger first, @Nullable final BigInteger second) {
+        return Nullsafe.nonNull(Nullsafe.nonNull(first).subtract(second));
+    }
+
+    /**
+     * @param first
+     *            The first value to divide
+     * @param second
+     *            The second value to divide
+     * @return The division of both values as a @NonNull {@link BigInteger}
+     */
+    @NonNull
+    public static BigInteger divideNullsafe(@Nullable final BigInteger first, @Nullable final BigInteger second) {
+        return Nullsafe.nonNull(Nullsafe.nonNull(first).divide(second));
+    }
+
+    /**
+     * @param first
+     *            The first value to multiply
+     * @param second
+     *            The second value to multiply
+     * @return The multiplication of both values as a @NonNull {@link BigInteger}
+     */
+    @NonNull
+    public static BigInteger multiplyNullsafe(@Nullable final BigInteger first, @Nullable final BigInteger second) {
+        return Nullsafe.nonNull(Nullsafe.nonNull(first).multiply(second));
     }
 
 }
