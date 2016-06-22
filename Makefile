@@ -1,6 +1,8 @@
 # https://www.gnu.org/prep/standards/html_node/Makefile-Basics.html#Makefile-Basics
 SHELL = /bin/sh
 
+timestamp := $(shell /bin/date "+%Y%m%d%H%M%S")
+
 all: help
 
 help:
