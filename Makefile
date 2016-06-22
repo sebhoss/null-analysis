@@ -31,3 +31,18 @@ docker-verify:
 	@docker-compose -f build/docker/build-environment.yml run --rm --user=$(UID) build
 	# findbugs likes to create these
 	@rm -rf ?/
+
+.PHONY: update-parent
+update-parent: ##@maintenance Updates the Maven parent to its latest version
+	@mvn versions:update-parent -U -DgenerateBackupPoms=false
+	@git add pom.xml
+	@git commit pom.xml -s -m 'Update to latest parent'
+
+.PHONY: release-into-local-nexus
+release-into-local-nexus: ##@release Releases all artifacts into a local nexus
+	@mvn clean deploy scm:tag -Prelease -Drevision=$(timestamp) -DpushChanges=false -DskipLocalStaging=true -Drelease=local
+
+.PHONY: release-into-sonatype-nexus
+release-into-sonatype-nexus: ##@release Releases all artifacts into Maven Central (through Sonatype OSSRH)
+	@mvn clean deploy scm:tag -Prelease -Drevision=$(timestamp) -DpushChanges=false -Drelease=sonatype
+	@git push --tags origin master
