@@ -24,10 +24,6 @@ sonar-analysis:
 sign-waiver:
 	@gpg2 --no-version --armor --sign AUTHORS/WAIVER
 
-.PHONY: release
-release:
-	@mvn release:prepare release:perform
-
 .PHONY: docker-verify
 docker-verify:
 	@docker-compose -f build/docker/build-environment.yml run --rm --user=$(UID) build
