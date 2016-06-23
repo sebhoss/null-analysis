@@ -5,7 +5,7 @@ Sebastian Hoß <http://seb.xn--ho-hia.de/[@sebhoss]>
 :project-group: de.xn--ho-hia.quality
 
 image:https://img.shields.io/badge/license-cc%20zero-000000.svg["CC Zero", link="http://creativecommons.org/publicdomain/zero/1.0/"]
-image:https://img.shields.io/maven-central/v/{project-group}/{project-name}.svg?style=flat-square["Maven Central", link="https://maven-badges.herokuapp.com/maven-central/{project-group}/{project-name}"]
+pass:[<span class="image"><a class="image" href="https://maven-badges.herokuapp.com/maven-central/de.xn--ho-hia.quality/null-analysis"><img src="https://img.shields.io/maven-central/v/de.xn--ho-hia.quality/null-analysis.svg?style=flat-square" alt="Maven Central"></a></span>]
 image:https://www.openhub.net/p/{project-name}/widgets/project_thin_badge.gif["Open Hub statistics", link="https://www.openhub.net/p/{project-name}"]
 image:https://img.shields.io/travis/{github-org}/{project-name}/master.svg?style=flat-square["Build Status", link="https://travis-ci.org/{github-org}/{project-name}"]
 image:https://img.shields.io/badge/irc-%23metio.wtf-green.svg?style=flat-square["Chat on IRC", link="http://webchat.freenode.net/?channels=metio.wtf"]
@@ -28,16 +28,16 @@ An `IllegalArgumentException` is thrown in case `myObject` is `null`.
 
 To use this project just declare the following dependency inside your POM:
 
-[source, xml]
+[source, xml, subs="attributes,verbatim"]
 ----
 <dependency>
-  <groupId>de.xn--ho-hia.quality</groupId>
-  <artifactId>null-analysis</artifactId>
+  <groupId>{project-group}</groupId>
+  <artifactId>{project-name}</artifactId>
   <version>${version.null-analysis}</version>
 </dependency
 ----
 
-Replace `${version.null-analysis}` with the http://search.maven.org/#search%7Cga%7C1%7Cg%3Ade.xn--ho-hia.quality%20a%3Anull-analysis[latest release]. This project follows the link:http://semver.org/[semantic versioning guidelines].
+Replace `${version.null-analysis}` with the http://search.maven.org/#search%7Cga%7C1%7Cg%3A{project-group}%20a%3A{project-name}[latest release]. This project follows the link:http://semver.org/[semantic versioning guidelines].
 
 === Compatibility
 
