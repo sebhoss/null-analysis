@@ -37,7 +37,7 @@ To use this project just declare the following dependency inside your POM:
 </dependency
 ----
 
-Replace `${version.null-analysis}` with the http://search.maven.org/#search%7Cga%7C1%7Cg%3A{project-group}%20a%3A{project-name}[latest release]. This project follows the link:http://semver.org/[semantic versioning guidelines].
+Replace `${version.null-analysis}` with the pass:[<a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3Ade.xn--ho-hia.quality%20a%3Anull-analysis">latest release</a>]. This project follows the link:http://semver.org/[semantic versioning guidelines].
 
 === Compatibility
 
