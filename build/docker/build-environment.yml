@@ -8,13 +8,27 @@
 version: '2'
 
 services:
-  verify-project:
+  build-environment:
     image: sebhoss/maven-build-environment:latest
-    container_name: null-analyis-verifier
     volumes:
      - "../../:/project"
     working_dir: /project
     external_links:
      - local-nexus:nexus
-    command: mvn clean verify -s /config/settings.xml -Dmaven.repo.local=/repository
     network_mode: bridge
+
+  # run this to verify the project inside a container
+  verify-project:
+    extends:
+      file: build-environment.yml
+      service: build-environment
+    container_name: null-analyis-verifier
+    command: mvn clean verify --settings /config/settings.xml -Dmaven.repo.local=/repository
+
+  # run this to cleanup your local target/ folder after running verify-project
+  clean-project:
+    extends:
+      file: build-environment.yml
+      service: build-environment
+    container_name: null-analyis-cleaner
+    command: mvn clean --settings /config/settings.xml -Dmaven.repo.local=/repository

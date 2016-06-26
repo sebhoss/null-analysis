@@ -43,33 +43,38 @@ HELP_FUN = \
 .PHONY: all
 all: help
 
+help: ##@other Show this help
+	@perl -e '$(HELP_FUN)' $(MAKEFILE_LIST)
+
 .PHONY: sonar-analysis
 sonar-analysis: ##@sebhoss Perform Sonarqube analysis
 	# http://docs.sonarqube.org/display/SONAR/Analyzing+with+Maven
-	@mvn clean install
-	@mvn sonar:sonar -Dsonar.host.url=http://localhost:59000 -Dsonar.pitest.mode=reuseReport
+	mvn clean install
+	mvn sonar:sonar -Dsonar.host.url=http://localhost:59000 -Dsonar.pitest.mode=reuseReport
 
 .PHONY: sign-waiver
 sign-waiver: ##@contributing Sign the WAIVER
-	@gpg2 --no-version --armor --sign AUTHORS/WAIVER
+	gpg2 --no-version --armor --sign AUTHORS/WAIVER
 
 .PHONY: docker-verify
 docker-verify: ##@docker Verify project in pre-defined build environment
-	@docker-compose -f build/docker/build-environment.yml run --rm verify-project
+	docker-compose -f build/docker/build-environment.yml run --rm verify-project
+	# since we are 'root' inside the container, we need another container run to cleanup after ourselves
+	docker-compose -f build/docker/build-environment.yml run --rm clean-project
 	# findbugs likes to create these
-	@rm -rf ?/
+	rm -rf ?/
 
 .PHONY: update-parent
 update-parent: ##@maintenance Updates the Maven parent to its latest version
-	@mvn versions:update-parent -U -DgenerateBackupPoms=false
-	@git add pom.xml
-	@git commit pom.xml -s -m 'Update to latest parent'
+	mvn versions:update-parent -U -DgenerateBackupPoms=false
+	git add pom.xml
+	git commit pom.xml -s -m 'Update to latest parent'
 
 .PHONY: release-into-local-nexus
 release-into-local-nexus: ##@release Release all artifacts into a local nexus
-	@mvn clean deploy scm:tag -Prelease -Drevision=$(TIMESTAMP) -DpushChanges=false -DskipLocalStaging=true -Drelease=local
+	mvn clean deploy scm:tag -Prelease -Drevision=$(TIMESTAMP) -DpushChanges=false -DskipLocalStaging=true -Drelease=local
 
 .PHONY: release-into-sonatype-nexus
 release-into-sonatype-nexus: ##@release Release all artifacts into Maven Central (through Sonatype OSSRH)
-	@mvn clean deploy scm:tag -Prelease -Drevision=$(TIMESTAMP) -DpushChanges=false -Drelease=sonatype
-	@git push --tags origin master
+	mvn clean deploy scm:tag -Prelease -Drevision=$(TIMESTAMP) -DpushChanges=false -Drelease=sonatype
+	git push --tags origin master
