@@ -5,12 +5,16 @@
 # in the LICENSE file.
 #
 
-build:
-  image: maven:3.3.9-jdk-8
-  volumes:
-   - "../../:/code"
-   - "~/.m2/repository/:/repository"
-  working_dir: /code
-  external_links:
-   - nexus_nexus_1:nexus
-  command: mvn clean verify -s build/docker/settings.xml -Dmaven.repo.local=/repository
+version: '2'
+
+services:
+  verify-project:
+    image: sebhoss/maven-build-environment:latest
+    container_name: null-analyis-verifier
+    volumes:
+     - "../../:/project"
+    working_dir: /project
+    external_links:
+     - local-nexus:nexus
+    command: mvn clean verify -s /config/settings.xml -Dmaven.repo.local=/repository
+    network_mode: bridge
