@@ -85,8 +85,6 @@
   <!-- https://maven.apache.org/pom.html#Properties -->
   <properties>
     <revision>SNAPSHOT</revision>
-    <skipTests>true</skipTests>
-    <pit.skip>true</pit.skip>
   </properties>
 
 </project>
