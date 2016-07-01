@@ -11,6 +11,7 @@ cache:
   directories:
   - $HOME/.m2
 
+# see https://github.com/trautonen/coveralls-maven-plugin#jacoco
 after_success:
 - mvn clean test jacoco:report coveralls:report
 
