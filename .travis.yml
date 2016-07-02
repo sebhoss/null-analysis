@@ -15,6 +15,18 @@ cache:
 after_success:
 - mvn clean test jacoco:report coveralls:report
 
+addons:
+  # see https://scan.coverity.com/travis_ci
+  # see https://docs.travis-ci.com/user/coverity-scan/
+  coverity_scan:
+    project:
+      name: "sebhoss/null-analysis"
+      description: "Build submitted via Travis CI"
+    notification_email: "metio@googlegroups.com"
+    build_command_prepend: "mvn clean"
+    build_command: "mvn -DskipTests=true compile"
+    branch_pattern: master
+
 # see https://docs.travis-ci.com/user/notifications/
 notifications:
   # see https://docs.travis-ci.com/user/notifications/#IRC-notification
@@ -22,3 +34,10 @@ notifications:
   # see https://docs.travis-ci.com/user/notifications/#Email-notifications
   email:
     - "metio@googlegroups.com"
+
+env:
+  global:
+    # exposes 'COVERITY_SCAN_TOKEN'
+    # see https://scan.coverity.com/travis_ci
+    # see https://docs.travis-ci.com/user/coverity-scan/
+    - secure: "DWQ0yvh0+bG3M57u+ThQZJItLH8I+p3wy1R9tFphoIaITQ5/n6G1B8iF1FwiJ7t9va+XWNXQTsUwmgQhSXqm2Px2hWaE3ctrCXWZPOxNiiuOmnjTZ6FTwdX1agyZBHTxj+f90Vqs1nBSg2GNdlzPM8cZ4ud/YVbgh8zqKADbaMU="

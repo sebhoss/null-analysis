@@ -3,6 +3,7 @@ Sebastian Hoß <http://seb.xn--ho-hia.de/[@sebhoss]>
 :github-org: sebhoss
 :project-name: null-analysis
 :project-group: de.xn--ho-hia.quality
+:coverity-project: 9331
 
 image:https://img.shields.io/badge/license-cc%20zero-000000.svg?style=flat-square["CC Zero", link="http://creativecommons.org/publicdomain/zero/1.0/"]
 pass:[<span class="image"><a class="image" href="https://maven-badges.herokuapp.com/maven-central/de.xn--ho-hia.quality/null-analysis"><img src="https://img.shields.io/maven-central/v/de.xn--ho-hia.quality/null-analysis.svg?style=flat-square" alt="Maven Central"></a></span>]
@@ -10,6 +11,7 @@ pass:[<span class="image"><a class="image" href="https://www.javadoc.io/doc/de.x
 image:https://www.openhub.net/p/{project-name}/widgets/project_thin_badge.gif["Open Hub statistics", link="https://www.openhub.net/p/{project-name}"]
 image:https://img.shields.io/travis/{github-org}/{project-name}/master.svg?style=flat-square["Build Status", link="https://travis-ci.org/{github-org}/{project-name}"]
 image:https://img.shields.io/coveralls/{github-org}/{project-name}/master.svg?style=flat-square["Code Coverage", link="https://coveralls.io/github/{github-org}/{project-name}"]
+image:https://img.shields.io/coverity/scan/{coverity-project}.svg?style=flat-square["Coverity Scan Result", link="https://scan.coverity.com/projects/{github-org}-{project-name}"]
 
 Utility library for null analysis in Java projects.
 
