@@ -68,7 +68,7 @@ public class NullsafeTest {
         thrown.expectMessage(CoreMatchers.is("Got unexpected NULL reference"));
 
         // then
-        Assert.assertNotNull(Nullsafe.nonNull(test));
+        Nullsafe.nonNull(test);
     }
 
     /**
@@ -86,7 +86,7 @@ public class NullsafeTest {
         thrown.expectMessage(CoreMatchers.is(errorMessage));
 
         // then
-        Assert.assertNotNull(Nullsafe.nonNull(test, errorMessage));
+        Nullsafe.nonNull(test, errorMessage);
     }
 
     /**
