@@ -12,6 +12,8 @@ image:https://www.openhub.net/p/{project-name}/widgets/project_thin_badge.gif["O
 image:https://img.shields.io/travis/{github-org}/{project-name}/master.svg?style=flat-square["Build Status", link="https://travis-ci.org/{github-org}/{project-name}"]
 image:https://img.shields.io/coveralls/{github-org}/{project-name}/master.svg?style=flat-square["Code Coverage", link="https://coveralls.io/github/{github-org}/{project-name}"]
 image:https://img.shields.io/coverity/scan/{coverity-project}.svg?style=flat-square["Coverity Scan Result", link="https://scan.coverity.com/projects/{github-org}-{project-name}"]
+image:https://reposs.herokuapp.com/?path={github-org}/{project-name}&style=flat-square&color=brightgreen["Repository size"]
+
 
 Utility library for null analysis in Java projects.
 
