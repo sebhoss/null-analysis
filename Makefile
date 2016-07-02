@@ -68,7 +68,7 @@ docker-verify: ##@docker Verify project in pre-defined build environment
 update-parent: ##@maintenance Updates the Maven parent to its latest version
 	mvn versions:update-parent -U -DgenerateBackupPoms=false
 	git add pom.xml
-	git commit pom.xml -s -m 'Update to latest parent'
+	git commit pom.xml -s -S -m 'Update to latest parent'
 
 .PHONY: release-into-local-nexus
 release-into-local-nexus: ##@release Release all artifacts into a local nexus
