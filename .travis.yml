@@ -15,6 +15,10 @@ cache:
 after_success:
 - mvn clean test jacoco:report coveralls:report
 
-# see https://docs.travis-ci.com/user/notifications/#IRC-notification
+# see https://docs.travis-ci.com/user/notifications/
 notifications:
+  # see https://docs.travis-ci.com/user/notifications/#IRC-notification
   irc: "chat.freenode.net#metio.wtf"
+  # see https://docs.travis-ci.com/user/notifications/#Email-notifications
+  email:
+    - "metio@googlegroups.com"
