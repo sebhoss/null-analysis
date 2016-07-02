@@ -5,6 +5,7 @@
  * in the LICENSE file.
  */
 /**
- * Code related to <code>null</code> analysis.
+ * Code related to <code>null</code> analysis. It is intended to support <code>null</code> analysis in tooling support,
+ * e.g. found in Eclipse, IntelliJ & the checker framework.
  */
 package de.xn__ho_hia.quality.null_analysis;
