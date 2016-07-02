@@ -34,7 +34,7 @@ public final class Nullsafe {
      *            The type of the reference
      * @param reference
      *            A possible <code>null</code> reference.
-     * @return Either the reference itself, or an {@link NullPointerException}, in case the reference was
+     * @return Either the reference itself, or an {@link IllegalArgumentException}, in case the reference was
      *         <code>null</code>.
      */
     public static <TYPE> @NonNull TYPE nonNull(@Nullable final TYPE reference) {
@@ -51,7 +51,7 @@ public final class Nullsafe {
      *            A possible <code>null</code> reference.
      * @param message
      *            The exception message to throw.
-     * @return Either the reference itself, or an {@link NullPointerException}, in case the reference was
+     * @return Either the reference itself, or an {@link IllegalArgumentException}, in case the reference was
      *         <code>null</code>.
      */
     public static <TYPE> @NonNull TYPE nonNull(@Nullable final TYPE reference, final String message) {
