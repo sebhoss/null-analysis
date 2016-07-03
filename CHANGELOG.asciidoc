@@ -2,15 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-== link:++https://github.com/sebhoss/null-analysis/compare/null-analysis-null-analysis-3.0.1-20160702153702...master++[Unreleased]
+== link:++https://github.com/sebhoss/null-analysis/compare/null-analysis-3.0.1-20160702153702...master++[Unreleased]
 
-== link:++https://github.com/sebhoss/null-analysis/compare/null-analysis-null-analysis-3.0.0-20160626185251...null-analysis-null-analysis-3.0.1-20160702153702++[3.0.1] - 2016-07-02
+== link:++https://github.com/sebhoss/null-analysis/compare/null-analysis-3.0.0-20160626185251...null-analysis-3.0.1-20160702153702++[3.0.1] - 2016-07-02
 
 === Changed
 
 * Added tests & coverage
 
-== link:++https://github.com/sebhoss/null-analysis/compare/null-analysis-null-analysis-null-analysis-2.0.0...null-analysis-null-analysis-3.0.0-20160626185251++[3.0.0] - 2016-06-26
+== link:++https://github.com/sebhoss/null-analysis/compare/null-analysis-2.0.0...null-analysis-3.0.0-20160626185251++[3.0.0] - 2016-06-26
 
 === Changed
 
